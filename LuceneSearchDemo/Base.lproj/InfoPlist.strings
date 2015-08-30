@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  LuceneSearchDemo
+
+  Created by Lukhnos Liu on 8/29/15.
+  Copyright (c) 2015 Lukhnos Liu. All rights reserved.
+*/
+CFBundleName = "Lucene Demo";
+CFBundleDisplayName = "Lucene Demo";
