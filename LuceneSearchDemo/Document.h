@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Document : NSObject
++ (nonnull NSString *)indexRootPath;
 + (void)rebuildIndex:(void (^ __nonnull)(void))completeHandler;
 + (nonnull NSArray *)search:(nonnull NSString *)query;
 @property (strong, nonnull) NSString *title;

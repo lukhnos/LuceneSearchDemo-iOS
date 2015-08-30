@@ -10,6 +10,20 @@
 		6A0A88F61B92A05B00F8A7C8 /* DocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0A88F51B92A05B00F8A7C8 /* DocumentCell.xib */; };
 		6AF294621B92B1A9009B5234 /* DocumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294611B92B1A9009B5234 /* DocumentCell.m */; };
 		6AF294651B92CC5C009B5234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AF294671B92CC5C009B5234 /* InfoPlist.strings */; };
+		6AF294811B92E050009B5234 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294701B92E050009B5234 /* Document.m */; };
+		6AF294821B92E050009B5234 /* HighlightingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294721B92E050009B5234 /* HighlightingHelper.m */; };
+		6AF294831B92E050009B5234 /* Indexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294741B92E050009B5234 /* Indexer.m */; };
+		6AF294841B92E050009B5234 /* MinimalHTMLEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294761B92E050009B5234 /* MinimalHTMLEncoder.m */; };
+		6AF294851B92E050009B5234 /* Searcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294781B92E050009B5234 /* Searcher.m */; };
+		6AF294861B92E050009B5234 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2947A1B92E050009B5234 /* SearchResult.m */; };
+		6AF294871B92E050009B5234 /* Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2947C1B92E050009B5234 /* Study.m */; };
+		6AF294881B92E050009B5234 /* Suggester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2947E1B92E050009B5234 /* Suggester.m */; };
+		6AF294891B92E050009B5234 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294801B92E050009B5234 /* Util.m */; };
+		6AF294991B92E0E8009B5234 /* libObjCLucene.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF294941B92E0D5009B5234 /* libObjCLucene.a */; };
+		6AF2949A1B92E0F6009B5234 /* libjre_emul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2948D1B92E0C1009B5234 /* libjre_emul.a */; };
+		6AF2949C1B92E100009B5234 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2949B1B92E100009B5234 /* libicucore.dylib */; };
+		6AF2949E1B92E105009B5234 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2949D1B92E105009B5234 /* libz.dylib */; };
+		6AF294A21B92E79E009B5234 /* acl-imdb-subset.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */; };
 		6AF499501B922D04005D9CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4994F1B922D04005D9CFB /* AppDelegate.swift */; };
 		6AF499521B922D04005D9CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF499511B922D04005D9CFB /* ViewController.swift */; };
 		6AF499551B922D04005D9CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF499531B922D04005D9CFB /* Main.storyboard */; };
@@ -20,6 +34,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6AF294931B92E0D5009B5234 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AD2F54A1B877C9D003F2171;
+			remoteInfo = ObjCLucene;
+		};
+		6AF294951B92E0D5009B5234 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AD2F5551B877C9D003F2171;
+			remoteInfo = ObjCLuceneTests;
+		};
+		6AF294971B92E0DC009B5234 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AD2F5491B877C9D003F2171;
+			remoteInfo = ObjCLucene;
+		};
 		6AF499601B922D04005D9CFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6AF499421B922D04005D9CFB /* Project object */;
@@ -34,6 +69,29 @@
 		6AF294601B92B1A9009B5234 /* DocumentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentCell.h; sourceTree = "<group>"; };
 		6AF294611B92B1A9009B5234 /* DocumentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentCell.m; sourceTree = "<group>"; };
 		6AF294661B92CC5C009B5234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6AF2946F1B92E050009B5234 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		6AF294701B92E050009B5234 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		6AF294711B92E050009B5234 /* HighlightingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighlightingHelper.h; sourceTree = "<group>"; };
+		6AF294721B92E050009B5234 /* HighlightingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightingHelper.m; sourceTree = "<group>"; };
+		6AF294731B92E050009B5234 /* Indexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indexer.h; sourceTree = "<group>"; };
+		6AF294741B92E050009B5234 /* Indexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Indexer.m; sourceTree = "<group>"; };
+		6AF294751B92E050009B5234 /* MinimalHTMLEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinimalHTMLEncoder.h; sourceTree = "<group>"; };
+		6AF294761B92E050009B5234 /* MinimalHTMLEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinimalHTMLEncoder.m; sourceTree = "<group>"; };
+		6AF294771B92E050009B5234 /* Searcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Searcher.h; sourceTree = "<group>"; };
+		6AF294781B92E050009B5234 /* Searcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Searcher.m; sourceTree = "<group>"; };
+		6AF294791B92E050009B5234 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
+		6AF2947A1B92E050009B5234 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
+		6AF2947B1B92E050009B5234 /* Study.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Study.h; sourceTree = "<group>"; };
+		6AF2947C1B92E050009B5234 /* Study.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Study.m; sourceTree = "<group>"; };
+		6AF2947D1B92E050009B5234 /* Suggester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Suggester.h; sourceTree = "<group>"; };
+		6AF2947E1B92E050009B5234 /* Suggester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Suggester.m; sourceTree = "<group>"; };
+		6AF2947F1B92E050009B5234 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		6AF294801B92E050009B5234 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		6AF2948D1B92E0C1009B5234 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjre_emul.a; sourceTree = "<group>"; };
+		6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjCLucene.xcodeproj; path = ../objclucene/ObjCLucene.xcodeproj; sourceTree = "<group>"; };
+		6AF2949B1B92E100009B5234 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6AF2949D1B92E105009B5234 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "acl-imdb-subset.json"; sourceTree = "<group>"; };
 		6AF4994A1B922D04005D9CFB /* LuceneSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuceneSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF4994E1B922D04005D9CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF4994F1B922D04005D9CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +112,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF2949E1B92E105009B5234 /* libz.dylib in Frameworks */,
+				6AF2949C1B92E100009B5234 /* libicucore.dylib in Frameworks */,
+				6AF294991B92E0E8009B5234 /* libObjCLucene.a in Frameworks */,
+				6AF2949A1B92E0F6009B5234 /* libjre_emul.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,11 +129,133 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AF294681B92E010009B5234 /* lucenestudy */ = {
+			isa = PBXGroup;
+			children = (
+				6AF294A01B92E784009B5234 /* sample */,
+				6AF294691B92E034009B5234 /* src */,
+			);
+			name = lucenestudy;
+			path = ../lucenestudy;
+			sourceTree = "<group>";
+		};
+		6AF294691B92E034009B5234 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2946A1B92E042009B5234 /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		6AF2946A1B92E042009B5234 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2946B1B92E050009B5234 /* objc */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		6AF2946B1B92E050009B5234 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2946C1B92E050009B5234 /* org */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		6AF2946C1B92E050009B5234 /* org */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2946D1B92E050009B5234 /* lukhnos */,
+			);
+			path = org;
+			sourceTree = "<group>";
+		};
+		6AF2946D1B92E050009B5234 /* lukhnos */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2946E1B92E050009B5234 /* lucenestudy */,
+			);
+			path = lukhnos;
+			sourceTree = "<group>";
+		};
+		6AF2946E1B92E050009B5234 /* lucenestudy */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2946F1B92E050009B5234 /* Document.h */,
+				6AF294701B92E050009B5234 /* Document.m */,
+				6AF294711B92E050009B5234 /* HighlightingHelper.h */,
+				6AF294721B92E050009B5234 /* HighlightingHelper.m */,
+				6AF294731B92E050009B5234 /* Indexer.h */,
+				6AF294741B92E050009B5234 /* Indexer.m */,
+				6AF294751B92E050009B5234 /* MinimalHTMLEncoder.h */,
+				6AF294761B92E050009B5234 /* MinimalHTMLEncoder.m */,
+				6AF294771B92E050009B5234 /* Searcher.h */,
+				6AF294781B92E050009B5234 /* Searcher.m */,
+				6AF294791B92E050009B5234 /* SearchResult.h */,
+				6AF2947A1B92E050009B5234 /* SearchResult.m */,
+				6AF2947B1B92E050009B5234 /* Study.h */,
+				6AF2947C1B92E050009B5234 /* Study.m */,
+				6AF2947D1B92E050009B5234 /* Suggester.h */,
+				6AF2947E1B92E050009B5234 /* Suggester.m */,
+				6AF2947F1B92E050009B5234 /* Util.h */,
+				6AF294801B92E050009B5234 /* Util.m */,
+			);
+			path = lucenestudy;
+			sourceTree = "<group>";
+		};
+		6AF2948A1B92E056009B5234 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2948B1B92E069009B5234 /* j2objc */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		6AF2948B1B92E069009B5234 /* j2objc */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2948C1B92E087009B5234 /* lib */,
+			);
+			name = j2objc;
+			path = "../../../opt/j2objc-0.9.8.1-20150829-2c1855d";
+			sourceTree = "<group>";
+		};
+		6AF2948C1B92E087009B5234 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2948D1B92E0C1009B5234 /* libjre_emul.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		6AF2948F1B92E0D3009B5234 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AF294941B92E0D5009B5234 /* libObjCLucene.a */,
+				6AF294961B92E0D5009B5234 /* ObjCLuceneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AF294A01B92E784009B5234 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
 		6AF499411B922D04005D9CFB = {
 			isa = PBXGroup;
 			children = (
 				6AF4994C1B922D04005D9CFB /* LuceneSearchDemo */,
+				6AF294681B92E010009B5234 /* lucenestudy */,
+				6AF2948A1B92E056009B5234 /* vendor */,
 				6AF499621B922D04005D9CFB /* LuceneSearchDemoTests */,
+				6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */,
+				6AF2949D1B92E105009B5234 /* libz.dylib */,
+				6AF2949B1B92E100009B5234 /* libicucore.dylib */,
 				6AF4994B1B922D04005D9CFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +328,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6AF294981B92E0DC009B5234 /* PBXTargetDependency */,
 			);
 			name = LuceneSearchDemo;
 			productName = LuceneSearchDemo;
@@ -197,6 +382,12 @@
 			mainGroup = 6AF499411B922D04005D9CFB;
 			productRefGroup = 6AF4994B1B922D04005D9CFB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6AF2948F1B92E0D3009B5234 /* Products */;
+					ProjectRef = 6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6AF499491B922D04005D9CFB /* LuceneSearchDemo */,
@@ -205,11 +396,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6AF294941B92E0D5009B5234 /* libObjCLucene.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libObjCLucene.a;
+			remoteRef = 6AF294931B92E0D5009B5234 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6AF294961B92E0D5009B5234 /* ObjCLuceneTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ObjCLuceneTests.xctest;
+			remoteRef = 6AF294951B92E0D5009B5234 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		6AF499481B922D04005D9CFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF294A21B92E79E009B5234 /* acl-imdb-subset.json in Resources */,
 				6A0A88F61B92A05B00F8A7C8 /* DocumentCell.xib in Resources */,
 				6AF499551B922D04005D9CFB /* Main.storyboard in Resources */,
 				6AF4995A1B922D04005D9CFB /* LaunchScreen.xib in Resources */,
@@ -232,10 +441,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF294891B92E050009B5234 /* Util.m in Sources */,
+				6AF294861B92E050009B5234 /* SearchResult.m in Sources */,
 				6AF294621B92B1A9009B5234 /* DocumentCell.m in Sources */,
+				6AF294831B92E050009B5234 /* Indexer.m in Sources */,
 				6AF499731B928F21005D9CFB /* Document.m in Sources */,
+				6AF294841B92E050009B5234 /* MinimalHTMLEncoder.m in Sources */,
 				6AF499521B922D04005D9CFB /* ViewController.swift in Sources */,
+				6AF294851B92E050009B5234 /* Searcher.m in Sources */,
+				6AF294811B92E050009B5234 /* Document.m in Sources */,
 				6AF499501B922D04005D9CFB /* AppDelegate.swift in Sources */,
+				6AF294821B92E050009B5234 /* HighlightingHelper.m in Sources */,
+				6AF294871B92E050009B5234 /* Study.m in Sources */,
+				6AF294881B92E050009B5234 /* Suggester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +468,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6AF294981B92E0DC009B5234 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjCLucene;
+			targetProxy = 6AF294971B92E0DC009B5234 /* PBXContainerItemProxy */;
+		};
 		6AF499611B922D04005D9CFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6AF499491B922D04005D9CFB /* LuceneSearchDemo */;
@@ -371,8 +594,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/vendor/j2objc/include",
+					"$(SRCROOT)/vendor/objclucene/include",
+					"$(SRCROOT)/lucenestudy/src/main/objc",
+				);
 				INFOPLIST_FILE = LuceneSearchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/lukhnos/opt/j2objc-0.9.8.1-20150829-2c1855d/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LuceneSearchDemo/LuceneSearchDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -384,8 +619,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/vendor/j2objc/include",
+					"$(SRCROOT)/vendor/objclucene/include",
+					"$(SRCROOT)/lucenestudy/src/main/objc",
+				);
 				INFOPLIST_FILE = LuceneSearchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/lukhnos/opt/j2objc-0.9.8.1-20150829-2c1855d/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LuceneSearchDemo/LuceneSearchDemo-Bridging-Header.h";
 			};

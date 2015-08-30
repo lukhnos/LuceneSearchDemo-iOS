@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Lucene Search Demo-->
+        <!--Lucene Demo-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LuceneSearchDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Lucene Search Demo" id="fQ1-5F-UlL">
+                    <navigationItem key="navigationItem" title="Lucene Demo" id="fQ1-5F-UlL">
                         <barButtonItem key="rightBarButtonItem" title="Rebuild" id="BKJ-oc-7Gd">
                             <connections>
                                 <action selector="rebuildAction" destination="vXZ-lx-hvc" id="9e5-SM-tor"/>

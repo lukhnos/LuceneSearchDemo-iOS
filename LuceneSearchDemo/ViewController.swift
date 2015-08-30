@@ -37,6 +37,13 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         tableView.rowHeight = 108;
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if !NSFileManager.defaultManager().fileExistsAtPath(Document.indexRootPath()) {
+            rebuildAction()
+        }
+    }
+
     @IBAction func moreInfoAction() {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/lukhnos/lucenestudy")!)
     }
@@ -91,7 +98,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
 
-        foundDocuments = Document.search("") as! [Document]
+        foundDocuments = Document.search(searchBar.text) as! [Document]
         if count(foundDocuments) > 0 {
             state = .HasResults
         } else {
