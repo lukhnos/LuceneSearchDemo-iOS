@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     let cellReuseID = "DocumentCell"
 
-    var foundDocuments: [Document] = []
+    var foundDocuments: NSArray = []
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var infoView: UIView!
@@ -98,8 +98,8 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
 
-        foundDocuments = Document.search(searchBar.text) as! [Document]
-        if count(foundDocuments) > 0 {
+        foundDocuments = Document.search(searchBar.text)
+        if foundDocuments.count > 0 {
             state = .HasResults
         } else {
             state = .NoResult
@@ -108,12 +108,13 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return count(foundDocuments)
+        return foundDocuments.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as! DocumentCell
-        cell.configureCell(foundDocuments[indexPath.row])
+        var doc = foundDocuments[indexPath.row] as! Document
+        cell.configureCell(doc)
         return cell
     }
 

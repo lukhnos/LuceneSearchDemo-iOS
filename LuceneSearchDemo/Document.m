@@ -55,7 +55,7 @@
     });
 }
 
-+ (nonnull NSArray *)search:(nonnull NSString *)query
++ (nonnull NSArray *)search:(nullable NSString *)query
 {
     NSMutableArray *results = [NSMutableArray array];
 
@@ -100,9 +100,8 @@
     }
     @catch(OrgApacheLuceneQueryparserClassicParseException *e) {
     }
-    @finally {
-        return results;
-    }
+
+    return results;
 }
 
 @end
