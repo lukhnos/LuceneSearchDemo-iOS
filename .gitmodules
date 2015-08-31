@@ -1,3 +1,6 @@
 [submodule "vendor/objclucene"]
 	path = vendor/objclucene
 	url = https://github.com/lukhnos/objclucene.git
+[submodule "lucenestudy"]
+	path = lucenestudy
+	url = https://github.com/lukhnos/lucenestudy
