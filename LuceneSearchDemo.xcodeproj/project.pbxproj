@@ -135,8 +135,7 @@
 				6AF294A01B92E784009B5234 /* sample */,
 				6AF294691B92E034009B5234 /* src */,
 			);
-			name = lucenestudy;
-			path = vendor/lucenestudy;
+			path = lucenestudy;
 			sourceTree = "<group>";
 		};
 		6AF294691B92E034009B5234 /* src */ = {

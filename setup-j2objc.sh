@@ -17,3 +17,8 @@ unzip "${FILE}"
 
 echo Moving ${DIR} to ${TARGET}/j2objc
 mv "${DIR}" "${TARGET}/j2objc"
+
+echo Making j2objc available to the objclucene submodule
+OBJCLUCENE_VENDOR=vendor/objclucene/vendor
+mkdir -p "${OBJCLUCENE_VENDOR}"
+ln -s "${PWD}/${TARGET}/j2objc" "${OBJCLUCENE_VENDOR}/j2objc"
