@@ -44,3 +44,6 @@ Carthage/Build
 
 # OS X
 .DS_Store
+
+# j2objc
+j2objc*.zip
