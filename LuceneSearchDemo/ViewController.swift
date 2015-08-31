@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     }
 
     @IBAction func moreInfoAction() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/lukhnos/lucenestudy")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://lukhnos.org/mobilelucene/ios")!)
     }
 
     @IBAction func rebuildAction() {
