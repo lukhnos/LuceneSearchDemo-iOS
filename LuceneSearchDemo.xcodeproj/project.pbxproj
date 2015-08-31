@@ -88,7 +88,7 @@
 		6AF2947F1B92E050009B5234 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		6AF294801B92E050009B5234 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		6AF2948D1B92E0C1009B5234 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjre_emul.a; sourceTree = "<group>"; };
-		6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjCLucene.xcodeproj; path = ../objclucene/ObjCLucene.xcodeproj; sourceTree = "<group>"; };
+		6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjCLucene.xcodeproj; path = vendor/objclucene/ObjCLucene.xcodeproj; sourceTree = "<group>"; };
 		6AF2949B1B92E100009B5234 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		6AF2949D1B92E105009B5234 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "acl-imdb-subset.json"; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				6AF294691B92E034009B5234 /* src */,
 			);
 			name = lucenestudy;
-			path = ../lucenestudy;
+			path = vendor/lucenestudy;
 			sourceTree = "<group>";
 		};
 		6AF294691B92E034009B5234 /* src */ = {
@@ -218,7 +218,7 @@
 				6AF2948C1B92E087009B5234 /* lib */,
 			);
 			name = j2objc;
-			path = "../../../opt/j2objc-0.9.8.1-20150829-2c1855d";
+			path = vendor/j2objc;
 			sourceTree = "<group>";
 		};
 		6AF2948C1B92E087009B5234 /* lib */ = {
