@@ -26,7 +26,6 @@
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acl-imdb-subset" ofType:@"json"];
 
     NSArray *jsonDocs = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:jsonPath] options:0 error:NULL];
-    NSLog(@"read: %lu", [jsonDocs count]);
 
     id<JavaUtilList> docs = new_JavaUtilArrayList_init();
     for (NSDictionary *entry in jsonDocs) {

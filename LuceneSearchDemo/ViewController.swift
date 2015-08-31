@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     @IBOutlet var tableView: UITableView!
 
     enum State {
-        case Welcome, NoResult, HasResults, RebuildingIndex
+        case Welcome, Searching, NoResult, HasResults, RebuildingIndex
     }
 
     var state: State = .NoResult {
@@ -72,6 +72,12 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
             infoLabel.hidden = false
             infoLabel.text = NSLocalizedString("Search with Lucene", comment: "");
             linkButton.hidden = false
+        case .Searching:
+            hideInfo = false
+            activityIndicator.startAnimating()
+            infoLabel.hidden = true
+            infoLabel.text = ""
+            linkButton.hidden = true
         case .NoResult:
             hideInfo = false
             activityIndicator.stopAnimating()
@@ -97,14 +103,20 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
 
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        state = .Searching
 
-        foundDocuments = Document.search(searchBar.text)
-        if foundDocuments.count > 0 {
-            state = .HasResults
-        } else {
-            state = .NoResult
-        }
-        tableView.reloadData()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            self.foundDocuments = Document.search(searchBar.text)
+
+            dispatch_async(dispatch_get_main_queue(), {
+                if self.foundDocuments.count > 0 {
+                    self.state = .HasResults
+                } else {
+                    self.state = .NoResult
+                }
+                self.tableView.reloadData()
+            })
+        })
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
