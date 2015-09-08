@@ -71,7 +71,7 @@
     });
 }
 
-+ (nonnull NSArray *)search:(nullable NSString *)query
++ (nullable NSArray *)search:(nullable NSMutableString *)query
 {
     NSMutableArray *results = [NSMutableArray array];
 
@@ -83,35 +83,38 @@
 
     // update the filtered array based on the search text
     @try {
-        OrgLukhnosLucenestudySearchResult *searchResult = [searcher searchWithNSString:query withInt:20];
+        @autoreleasepool {
+            OrgLukhnosLucenestudySearchResult *searchResult = [searcher searchWithNSString:query withInt:20];
 
-        for (OrgLukhnosLucenestudyDocument *searchDoc in searchResult->documents_) {
-            Document *doc = [[Document alloc] init];
+            for (OrgLukhnosLucenestudyDocument *searchDoc in searchResult->documents_) {
+                Document *doc = [[Document alloc] init];
 
-            NSString *title = [searchResult getHighlightedTitleWithOrgLukhnosLucenestudyDocument:searchDoc];
-            doc.title = [NSString stringWithFormat:@"%@ (%d)", title, searchDoc->year_];
+                NSString *title = [searchResult getHighlightedTitleWithOrgLukhnosLucenestudyDocument:searchDoc];
+                doc.title = [NSString stringWithFormat:@"%@ (%d)", title, searchDoc->year_];
 
-            NSMutableString *info = [[NSMutableString alloc] init];
+                NSMutableString *info = [[NSMutableString alloc] init];
 
-            if (searchDoc->positive_) {
-                [info appendString:@"👍"];
-            } else {
-                [info appendString:@"👎"];
+                if (searchDoc->positive_) {
+                    [info appendString:@"👍"];
+                } else {
+                    [info appendString:@"👎"];
+                }
+
+                [info appendFormat:@" %d/10", searchDoc->rating_];
+
+                doc.info = info;
+
+                if ([searchDoc->source_ length]) {
+                    doc.source = [NSURL URLWithString:searchDoc->source_];
+                }
+
+                doc.review = [searchResult getHighlightedReviewWithOrgLukhnosLucenestudyDocument:searchDoc];
+
+                [results addObject:doc];
             }
-
-            [info appendFormat:@" %d/10", searchDoc->rating_];
-
-            doc.info = info;
-
-            if ([searchDoc->source_ length]) {
-                doc.source = [NSURL URLWithString:searchDoc->source_];
-            }
-
-            doc.review = [searchResult getHighlightedReviewWithOrgLukhnosLucenestudyDocument:searchDoc];
-
-            [results addObject:doc];
+            [searcher close];
         }
-        [searcher close];
+
 
     }
     @catch(OrgApacheLuceneQueryparserClassicParseException *e) {

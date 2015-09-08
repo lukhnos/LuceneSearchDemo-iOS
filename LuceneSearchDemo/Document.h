@@ -28,7 +28,7 @@
 @interface Document : NSObject
 + (nonnull NSString *)indexRootPath;
 + (void)rebuildIndex:(void (^ __nonnull)(void))completeHandler;
-+ (nonnull NSArray *)search:(nullable NSString *)query;
++ (nullable NSArray *)search:(nullable NSMutableString *)query;
 @property (strong, nonnull) NSString *title;
 @property (strong, nonnull) NSString *info;
 @property (strong, nullable) NSURL *source;

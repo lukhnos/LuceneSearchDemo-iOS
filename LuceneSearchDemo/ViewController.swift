@@ -58,6 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         super.viewWillAppear(animated)
         if !NSFileManager.defaultManager().fileExistsAtPath(Document.indexRootPath()) {
             rebuildAction()
+        } else {
+            Document.search("")
         }
     }
 
@@ -118,12 +120,22 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         tableView.hidden = !hideInfo
     }
 
+    var text = NSMutableString()
+
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         state = .Searching
 
+        if let t = searchBar.text {
+            text.setString(t)
+        }
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            self.foundDocuments = Document.search(searchBar.text)
+            if let docs = Document.search(self.text) {
+                self.foundDocuments = docs
+            } else {
+                self.foundDocuments = []
+            }
 
             dispatch_async(dispatch_get_main_queue(), {
                 if self.foundDocuments.count > 0 {
