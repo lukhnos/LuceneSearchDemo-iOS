@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="873" y="-381"/>
         </scene>
-        <!--Lucene Demo-->
+        <!--Film Reviews-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LuceneSearchDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,8 +130,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Lucene Demo" id="fQ1-5F-UlL">
-                        <barButtonItem key="rightBarButtonItem" title="Rebuild" id="BKJ-oc-7Gd">
+                    <navigationItem key="navigationItem" title="Film Reviews" id="fQ1-5F-UlL">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JeC-s0-dSu"/>
+                        <barButtonItem key="rightBarButtonItem" title="Reindex" id="BKJ-oc-7Gd">
                             <connections>
                                 <action selector="rebuildAction" destination="vXZ-lx-hvc" id="9e5-SM-tor"/>
                             </connections>

@@ -115,7 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             hideInfo = false
             activityIndicator.startAnimating()
             infoLabel.hidden = false
-            infoLabel.text = NSLocalizedString("Building Index…", comment: "");
+            infoLabel.text = NSLocalizedString("Indexing Reviews…", comment: "");
             linkButton.hidden = true
         }
         infoView.hidden = hideInfo

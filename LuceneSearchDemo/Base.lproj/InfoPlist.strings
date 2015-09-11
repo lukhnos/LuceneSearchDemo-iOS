@@ -23,5 +23,5 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-CFBundleName = "Lucene Demo";
-CFBundleDisplayName = "Lucene Demo";
+CFBundleName = "Film Reviews";
+CFBundleDisplayName = "Film Reviews";
