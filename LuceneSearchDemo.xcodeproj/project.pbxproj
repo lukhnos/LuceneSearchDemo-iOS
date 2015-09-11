@@ -319,9 +319,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AF499491B922D04005D9CFB /* LuceneSearchDemo */ = {
+		6AF499491B922D04005D9CFB /* LuceneFilmReviewSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AF499691B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneSearchDemo" */;
+			buildConfigurationList = 6AF499691B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneFilmReviewSearch" */;
 			buildPhases = (
 				6AF499461B922D04005D9CFB /* Sources */,
 				6AF499471B922D04005D9CFB /* Frameworks */,
@@ -332,7 +332,7 @@
 			dependencies = (
 				6AF294981B92E0DC009B5234 /* PBXTargetDependency */,
 			);
-			name = LuceneSearchDemo;
+			name = LuceneFilmReviewSearch;
 			productName = LuceneSearchDemo;
 			productReference = 6AF4994A1B922D04005D9CFB /* LuceneSearchDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -392,7 +392,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				6AF499491B922D04005D9CFB /* LuceneSearchDemo */,
+				6AF499491B922D04005D9CFB /* LuceneFilmReviewSearch */,
 				6AF4995E1B922D04005D9CFB /* LuceneSearchDemoTests */,
 			);
 		};
@@ -478,7 +478,7 @@
 		};
 		6AF499611B922D04005D9CFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6AF499491B922D04005D9CFB /* LuceneSearchDemo */;
+			target = 6AF499491B922D04005D9CFB /* LuceneFilmReviewSearch */;
 			targetProxy = 6AF499601B922D04005D9CFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = LuceneSearchDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuceneSearchDemo.app/LuceneSearchDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuceneFilmReviewSearch.app/LuceneFilmReviewSearch";
 			};
 			name = Debug;
 		};
@@ -671,7 +671,7 @@
 				INFOPLIST_FILE = LuceneSearchDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuceneSearchDemo.app/LuceneSearchDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuceneFilmReviewSearch.app/LuceneFilmReviewSearch";
 			};
 			name = Release;
 		};
@@ -687,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AF499691B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneSearchDemo" */ = {
+		6AF499691B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneFilmReviewSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AF4996A1B922D04005D9CFB /* Debug */,

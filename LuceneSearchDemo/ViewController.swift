@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func moreInfoAction() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://lukhnos.org/mobilelucene/ios")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://lukhnos.org/mobilelucene/app-ios")!)
     }
 
     @IBAction func rebuildAction() {
