@@ -32,6 +32,14 @@
 #import "org/lukhnos/lucenestudy/Searcher.h"
 #import "org/lukhnos/lucenestudy/SearchResult.h"
 
+@interface Document ()
+@property (strong, nonatomic) OrgLukhnosLucenestudySearchResult *searchResult;
+@property (strong, nonatomic) OrgLukhnosLucenestudyDocument *searchDocument;
+@property (strong, nonatomic) NSString *cachedHighlightedTitle;
+@property (strong, nonatomic) NSString *cachedHighlightedReviewSnippet;
+@end
+
+
 @implementation Document
 
 + (NSString *)indexRootPath {
@@ -88,28 +96,8 @@
 
             for (OrgLukhnosLucenestudyDocument *searchDoc in searchResult->documents_) {
                 Document *doc = [[Document alloc] init];
-
-                NSString *title = [searchResult getHighlightedTitleWithOrgLukhnosLucenestudyDocument:searchDoc];
-                doc.title = [NSString stringWithFormat:@"%@ (%d)", title, searchDoc->year_];
-
-                NSMutableString *info = [[NSMutableString alloc] init];
-
-                if (searchDoc->positive_) {
-                    [info appendString:@"👍"];
-                } else {
-                    [info appendString:@"👎"];
-                }
-
-                [info appendFormat:@" %d/10", searchDoc->rating_];
-
-                doc.info = info;
-
-                if ([searchDoc->source_ length]) {
-                    doc.source = [NSURL URLWithString:searchDoc->source_];
-                }
-
-                doc.review = [searchResult getHighlightedReviewWithOrgLukhnosLucenestudyDocument:searchDoc];
-
+                doc.searchResult = searchResult;
+                doc.searchDocument = searchDoc;
                 [results addObject:doc];
             }
             [searcher close];
@@ -118,9 +106,52 @@
 
     }
     @catch(OrgApacheLuceneQueryparserClassicParseException *e) {
+        NSLog(@"Cannot parse query: %@", query);
     }
 
     return results;
+}
+
+- (NSString *)highlightedTitle
+{
+    if (!self.cachedHighlightedTitle) {
+        self.cachedHighlightedTitle = [self.searchResult getHighlightedTitleWithOrgLukhnosLucenestudyDocument:self.searchDocument];
+    }
+    return self.cachedHighlightedTitle;
+}
+
+- (NSString *)info
+{
+    NSMutableString *info = [[NSMutableString alloc] init];
+
+    if (self.searchDocument->positive_) {
+        [info appendString:@"👍"];
+    } else {
+        [info appendString:@"👎"];
+    }
+
+    [info appendFormat:@" %d/10", self.searchDocument->rating_];
+    return info;
+}
+
+- (NSURL *)source
+{
+    if ([self.searchDocument->source_ length]) {
+        return [NSURL URLWithString:self.searchDocument->source_];
+    }
+    return nil;
+}
+
+- (NSString *)highlightedReviewSnippet
+{
+    if (!self.cachedHighlightedReviewSnippet) {
+        self.cachedHighlightedReviewSnippet = [self.searchResult getHighlightedReviewWithOrgLukhnosLucenestudyDocument:self.searchDocument];
+    }
+    return self.cachedHighlightedReviewSnippet;
+}
+- (NSString *)highlightedReview
+{
+    return [self.searchResult getFullHighlightedReviewWithOrgLukhnosLucenestudyDocument:self.searchDocument];
 }
 
 @end

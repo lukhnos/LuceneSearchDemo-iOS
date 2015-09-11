@@ -112,9 +112,9 @@ static NSAttributedString *GetAttrString(NSString *str, CGFloat size)
 }
 
 - (void)configureCell:(nonnull Document *)doc {
-    self.title.attributedText = GetAttrString(doc.title, 19.0);
+    self.title.attributedText = GetAttrString(doc.highlightedTitle, 19.0);
     self.info.text = doc.info;
-    self.review.attributedText = GetAttrString(doc.review, 14.0);
+    self.review.attributedText = GetAttrString(doc.highlightedReviewSnippet, 14.0);
     self.source = doc.source;
     self.sourceButton.enabled = (self.source != nil);
 }

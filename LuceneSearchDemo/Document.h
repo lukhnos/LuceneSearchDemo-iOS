@@ -29,8 +29,9 @@
 + (nonnull NSString *)indexRootPath;
 + (void)rebuildIndex:(void (^ __nonnull)(void))completeHandler;
 + (nullable NSArray *)search:(nullable NSMutableString *)query;
-@property (strong, nonnull) NSString *title;
-@property (strong, nonnull) NSString *info;
-@property (strong, nullable) NSURL *source;
-@property (strong, nonnull) NSString *review;
+@property (readonly, nonnull) NSString *highlightedTitle;
+@property (readonly, nonnull) NSString *info;
+@property (readonly, nullable) NSURL *source;
+@property (readonly, nonnull) NSString *highlightedReviewSnippet;
+@property (readonly, nonnull) NSString *highlightedReview;
 @end
