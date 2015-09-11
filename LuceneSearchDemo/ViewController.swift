@@ -143,6 +143,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
                 } else {
                     self.state = .NoResult
                 }
+                self.tableView.setContentOffset(CGPointZero, animated: false)
                 self.tableView.reloadData()
             })
         })
