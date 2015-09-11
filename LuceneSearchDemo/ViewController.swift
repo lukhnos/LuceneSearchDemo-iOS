@@ -25,7 +25,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     let cellReuseID = "DocumentCell"
 
     var foundDocuments: NSArray = []
@@ -58,8 +58,10 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         super.viewWillAppear(animated)
         if !NSFileManager.defaultManager().fileExistsAtPath(Document.indexRootPath()) {
             rebuildAction()
-        } else {
-            Document.search("")
+        }
+
+        if let selectedIndexPath = tableView.indexPathForSelectedRow() {
+            tableView.deselectRowAtIndexPath(selectedIndexPath, animated: false)
         }
     }
 
@@ -160,5 +162,8 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         return cell
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showDetail", sender: self)
+    }
 }
 

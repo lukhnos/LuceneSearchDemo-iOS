@@ -4,6 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="9wJ-vw-04r">
+            <objects>
+                <viewController id="Cj9-0R-XVE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1lJ-8R-IC1"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcw-5h-BpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Itu-gu-HlT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r22-Ba-zfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="-169"/>
+        </scene>
         <!--Lucene Demo-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -28,6 +46,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="yaz-l3-EFi"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="KbP-8I-lTz"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lef-di-B6L">
@@ -101,6 +120,7 @@
                         <outlet property="linkButton" destination="5TZ-U7-Ekq" id="7h2-ME-03z"/>
                         <outlet property="searchBar" destination="nzl-x7-p5w" id="XKP-mv-96m"/>
                         <outlet property="tableView" destination="qyW-dr-zdW" id="lFL-gE-wxV"/>
+                        <segue destination="Cj9-0R-XVE" kind="show" identifier="showDetail" id="4sE-e0-L1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
