@@ -115,7 +115,11 @@
 - (NSString *)highlightedTitle
 {
     if (!self.cachedHighlightedTitle) {
-        self.cachedHighlightedTitle = [self.searchResult getHighlightedTitleWithOrgLukhnosLucenestudyDocument:self.searchDocument];
+        NSString *title = [self.searchResult getHighlightedTitleWithOrgLukhnosLucenestudyDocument:self.searchDocument];
+        if (self.searchDocument->year_) {
+            title = [title stringByAppendingFormat:@" (%d)", self.searchDocument->year_];
+        }
+        self.cachedHighlightedTitle = title;
     }
     return self.cachedHighlightedTitle;
 }

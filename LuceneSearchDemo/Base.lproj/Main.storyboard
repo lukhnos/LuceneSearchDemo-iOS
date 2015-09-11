@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Full Review-->
         <scene sceneID="9wJ-vw-04r">
             <objects>
-                <viewController id="Cj9-0R-XVE" sceneMemberID="viewController">
+                <viewController title="Full Review" id="Cj9-0R-XVE" customClass="DetailsViewController" customModule="LuceneSearchDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1lJ-8R-IC1"/>
                         <viewControllerLayoutGuide type="bottom" id="zcw-5h-BpY"/>
@@ -15,12 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="Itu-gu-HlT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNH-d2-YRa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="review text">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oNH-d2-YRa" secondAttribute="trailing" id="5qE-2b-MjP"/>
+                            <constraint firstItem="zcw-5h-BpY" firstAttribute="top" secondItem="oNH-d2-YRa" secondAttribute="bottom" id="Fzg-Sh-BBG"/>
+                            <constraint firstItem="oNH-d2-YRa" firstAttribute="top" secondItem="Itu-gu-HlT" secondAttribute="top" id="ULh-Mi-fcl"/>
+                            <constraint firstItem="oNH-d2-YRa" firstAttribute="leading" secondItem="Itu-gu-HlT" secondAttribute="leading" id="yVy-Qz-VaU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reviewTextView" destination="oNH-d2-YRa" id="LLe-U4-pTD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r22-Ba-zfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="-169"/>
+            <point key="canvasLocation" x="873" y="-381"/>
         </scene>
         <!--Lucene Demo-->
         <scene sceneID="ufC-wZ-h7g">

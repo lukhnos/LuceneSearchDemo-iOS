@@ -48,7 +48,7 @@ static NSAttributedString *Simple(NSString *str, NSDictionary *attrs) {
     return [[NSAttributedString alloc] initWithString:str attributes:attrs];
 }
 
-static NSAttributedString *GetAttrString(NSString *str, CGFloat size)
+NSAttributedString *__nonnull GetAttrString(NSString *__nonnull str, CGFloat size)
 {
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] init];
 
@@ -89,6 +89,12 @@ static NSAttributedString *GetAttrString(NSString *str, CGFloat size)
             pos += 4;
             from = pos;
             attrs = normalAttrs;
+            continue;
+        } else if (LookAhead(str, pos, @"<br>") || LookAhead(str, pos, @"<BR>")) {
+            [attrStr appendAttributedString:Emit(str, from, pos, attrs)];
+            [attrStr appendAttributedString:Simple(@"\n", attrs)];
+            pos += 4;
+            from = pos;
             continue;
         }
 

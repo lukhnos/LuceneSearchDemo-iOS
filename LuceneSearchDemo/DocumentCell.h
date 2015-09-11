@@ -35,3 +35,5 @@
 @property (strong, nonatomic, nonnull) IBOutlet UITextView *review;
 @property (strong, nonatomic, nullable) NSURL *source;
 @end
+
+NSAttributedString *__nonnull GetAttrString(NSString *__nonnull str, CGFloat size);

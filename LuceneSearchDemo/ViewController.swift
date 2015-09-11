@@ -165,5 +165,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("showDetail", sender: self)
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let selectedIndexPath = tableView.indexPathForSelectedRow() {
+            var doc = foundDocuments[selectedIndexPath.row] as! Document
+            let controller = segue.destinationViewController as! DetailsViewController
+            controller.document = doc
+        }
+    }
 }
 
