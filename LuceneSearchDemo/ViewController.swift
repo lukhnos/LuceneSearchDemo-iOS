@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var infoLabel: UILabel!
     @IBOutlet var linkButton: UIButton!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var reindexButtonItem: UIBarButtonItem!
 
     enum State {
         case Welcome, Searching, NoResult, HasResults, RebuildingIndex
@@ -52,6 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         state = .Welcome
         tableView.registerNib(UINib(nibName: cellReuseID, bundle: nil), forCellReuseIdentifier: cellReuseID)
         tableView.rowHeight = 108;
+        searchBar.autocapitalizationType = UITextAutocapitalizationType.None
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -70,6 +72,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func rebuildAction() {
+        reindexButtonItem.enabled = false
         state = .RebuildingIndex
         searchBar.text = ""
         searchBar.resignFirstResponder()
@@ -80,6 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Document.rebuildIndex({
             self.state = .Welcome
             self.searchBar.hidden = false
+            self.reindexButtonItem.enabled = true
         })
     }
 

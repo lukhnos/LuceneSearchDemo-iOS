@@ -143,6 +143,7 @@
                         <outlet property="infoLabel" destination="Ziv-uj-dWD" id="1PN-a4-aee"/>
                         <outlet property="infoView" destination="Lef-di-B6L" id="h2h-zv-P5C"/>
                         <outlet property="linkButton" destination="5TZ-U7-Ekq" id="7h2-ME-03z"/>
+                        <outlet property="reindexButtonItem" destination="BKJ-oc-7Gd" id="4O1-uY-KT2"/>
                         <outlet property="searchBar" destination="nzl-x7-p5w" id="XKP-mv-96m"/>
                         <outlet property="tableView" destination="qyW-dr-zdW" id="lFL-gE-wxV"/>
                         <segue destination="Cj9-0R-XVE" kind="show" identifier="showDetail" id="4sE-e0-L1a"/>
