@@ -7,7 +7,7 @@
         <!--Full Review-->
         <scene sceneID="9wJ-vw-04r">
             <objects>
-                <viewController title="Full Review" id="Cj9-0R-XVE" customClass="DetailsViewController" customModule="LuceneSearchDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Full Review" id="Cj9-0R-XVE" customClass="DetailsViewController" customModule="LuceneFilmReviewSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1lJ-8R-IC1"/>
                         <viewControllerLayoutGuide type="bottom" id="zcw-5h-BpY"/>
@@ -49,7 +49,7 @@
         <!--Film Reviews-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LuceneSearchDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LuceneFilmReviewSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
