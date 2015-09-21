@@ -101,7 +101,7 @@
 		6AF499541B922D04005D9CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AF499561B922D04005D9CFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6AF499591B922D04005D9CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6AF4995F1B922D04005D9CFB /* LuceneSearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuceneSearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF4995F1B922D04005D9CFB /* LuceneFilmReviewSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuceneFilmReviewSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF499641B922D04005D9CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF499651B922D04005D9CFB /* LuceneSearchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuceneSearchDemoTests.swift; sourceTree = "<group>"; };
 		6AF499701B928F21005D9CFB /* LuceneSearchDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuceneSearchDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				6AF4994A1B922D04005D9CFB /* LuceneFilmReviewSearch.app */,
-				6AF4995F1B922D04005D9CFB /* LuceneSearchDemoTests.xctest */,
+				6AF4995F1B922D04005D9CFB /* LuceneFilmReviewSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,13 +333,13 @@
 				6AF294981B92E0DC009B5234 /* PBXTargetDependency */,
 			);
 			name = LuceneFilmReviewSearch;
-			productName = LuceneSearchDemo;
+			productName = LuceneFilmReviewSearch;
 			productReference = 6AF4994A1B922D04005D9CFB /* LuceneFilmReviewSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6AF4995E1B922D04005D9CFB /* LuceneSearchDemoTests */ = {
+		6AF4995E1B922D04005D9CFB /* LuceneFilmReviewSearchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AF4996C1B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneSearchDemoTests" */;
+			buildConfigurationList = 6AF4996C1B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneFilmReviewSearchTests" */;
 			buildPhases = (
 				6AF4995B1B922D04005D9CFB /* Sources */,
 				6AF4995C1B922D04005D9CFB /* Frameworks */,
@@ -350,9 +350,9 @@
 			dependencies = (
 				6AF499611B922D04005D9CFB /* PBXTargetDependency */,
 			);
-			name = LuceneSearchDemoTests;
+			name = LuceneFilmReviewSearchTests;
 			productName = LuceneSearchDemoTests;
-			productReference = 6AF4995F1B922D04005D9CFB /* LuceneSearchDemoTests.xctest */;
+			productReference = 6AF4995F1B922D04005D9CFB /* LuceneFilmReviewSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -395,7 +395,7 @@
 			projectRoot = "";
 			targets = (
 				6AF499491B922D04005D9CFB /* LuceneFilmReviewSearch */,
-				6AF4995E1B922D04005D9CFB /* LuceneSearchDemoTests */,
+				6AF4995E1B922D04005D9CFB /* LuceneFilmReviewSearchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -698,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AF4996C1B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneSearchDemoTests" */ = {
+		6AF4996C1B922D04005D9CFB /* Build configuration list for PBXNativeTarget "LuceneFilmReviewSearchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AF4996D1B922D04005D9CFB /* Debug */,
