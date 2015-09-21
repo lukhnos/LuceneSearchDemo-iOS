@@ -50,7 +50,7 @@ class DetailsViewController : UIViewController {
 //        reviewTextView.setContentOffset(CGPointZero, animated: false)
         reviewTextView.scrollEnabled = false
 
-        if let source = document.source {
+        if let _ = document.source {
             let sourceButton = UIBarButtonItem(title: "Source", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("sourceAction"))
             navigationItem.rightBarButtonItem = sourceButton
         }
