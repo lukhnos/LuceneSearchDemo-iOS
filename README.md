@@ -19,3 +19,5 @@ Then, use the Xcode project to build the app target.
 
 For more information about the app and its data source, please visit the
 [lucenestudy](https://github.com/lukhnos/lucenestudy/tree/mobile) project.
+
+The app is also available on [the App Store](https://itunes.apple.com/us/app/film-review-search-lucene/id1039258169?mt=8).
