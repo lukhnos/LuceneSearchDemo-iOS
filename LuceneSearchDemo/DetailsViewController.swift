@@ -37,7 +37,7 @@ class DetailsViewController : UIViewController {
             return
         }
 
-        var text = NSMutableAttributedString()
+        let text = NSMutableAttributedString()
         text.appendAttributedString(GetAttrString(document.highlightedTitle, 18))
         text.appendAttributedString(NSAttributedString(string: "\n\n"))
         text.appendAttributedString(GetAttrString(document.info, 12))
@@ -51,7 +51,7 @@ class DetailsViewController : UIViewController {
         reviewTextView.scrollEnabled = false
 
         if let source = document.source {
-            var sourceButton = UIBarButtonItem(title: "Source", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("sourceAction"))
+            let sourceButton = UIBarButtonItem(title: "Source", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("sourceAction"))
             navigationItem.rightBarButtonItem = sourceButton
         }
     }

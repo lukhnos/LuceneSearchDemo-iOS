@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             rebuildAction()
         }
 
-        if let selectedIndexPath = tableView.indexPathForSelectedRow() {
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(selectedIndexPath, animated: false)
         }
     }
@@ -160,8 +160,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as! DocumentCell
-        var doc = foundDocuments[indexPath.row] as! Document
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as! DocumentCell
+        let doc = foundDocuments[indexPath.row] as! Document
         cell.configureCell(doc)
         return cell
     }
@@ -171,8 +171,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let selectedIndexPath = tableView.indexPathForSelectedRow() {
-            var doc = foundDocuments[selectedIndexPath.row] as! Document
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            let doc = foundDocuments[selectedIndexPath.row] as! Document
             let controller = segue.destinationViewController as! DetailsViewController
             controller.document = doc
         }
