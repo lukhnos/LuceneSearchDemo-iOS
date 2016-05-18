@@ -21,7 +21,6 @@
 		6AF294881B92E050009B5234 /* Suggester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2947E1B92E050009B5234 /* Suggester.m */; };
 		6AF294891B92E050009B5234 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294801B92E050009B5234 /* Util.m */; };
 		6AF294991B92E0E8009B5234 /* libObjCLucene.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF294941B92E0D5009B5234 /* libObjCLucene.a */; };
-		6AF2949A1B92E0F6009B5234 /* libjre_emul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2948D1B92E0C1009B5234 /* libjre_emul.a */; };
 		6AF2949C1B92E100009B5234 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2949B1B92E100009B5234 /* libicucore.dylib */; };
 		6AF2949E1B92E105009B5234 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2949D1B92E105009B5234 /* libz.dylib */; };
 		6AF294A21B92E79E009B5234 /* acl-imdb-subset.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */; };
@@ -32,6 +31,7 @@
 		6AF4995A1B922D04005D9CFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF499581B922D04005D9CFB /* LaunchScreen.xib */; };
 		6AF499661B922D04005D9CFB /* LuceneSearchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF499651B922D04005D9CFB /* LuceneSearchDemoTests.swift */; };
 		6AF499731B928F21005D9CFB /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF499721B928F21005D9CFB /* Document.m */; };
+		75D8CE4A1CEC767500E15FB6 /* libjre_emul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D8CE491CEC767500E15FB6 /* libjre_emul.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +89,6 @@
 		6AF2947E1B92E050009B5234 /* Suggester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Suggester.m; sourceTree = "<group>"; };
 		6AF2947F1B92E050009B5234 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		6AF294801B92E050009B5234 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
-		6AF2948D1B92E0C1009B5234 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjre_emul.a; sourceTree = "<group>"; };
 		6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjCLucene.xcodeproj; path = vendor/objclucene/ObjCLucene.xcodeproj; sourceTree = "<group>"; };
 		6AF2949B1B92E100009B5234 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		6AF2949D1B92E105009B5234 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -107,6 +106,7 @@
 		6AF499701B928F21005D9CFB /* LuceneSearchDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuceneSearchDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		6AF499711B928F21005D9CFB /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		6AF499721B928F21005D9CFB /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		75D8CE491CEC767500E15FB6 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = vendor/j2objc/lib/libjre_emul.a; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +116,8 @@
 			files = (
 				6AF2949E1B92E105009B5234 /* libz.dylib in Frameworks */,
 				6AF2949C1B92E100009B5234 /* libicucore.dylib in Frameworks */,
+				75D8CE4A1CEC767500E15FB6 /* libjre_emul.a in Frameworks */,
 				6AF294991B92E0E8009B5234 /* libObjCLucene.a in Frameworks */,
-				6AF2949A1B92E0F6009B5234 /* libjre_emul.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +225,7 @@
 		6AF2948C1B92E087009B5234 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				6AF2948D1B92E0C1009B5234 /* libjre_emul.a */,
+				75D8CE491CEC767500E15FB6 /* libjre_emul.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -612,6 +612,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/vendor/j2objc/lib",
+					"$(PROJECT_DIR)/vendor/j2objc/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.lukhnos.$(PRODUCT_NAME:rfc1034identifier)";
@@ -638,6 +639,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/vendor/j2objc/lib",
+					"$(PROJECT_DIR)/vendor/j2objc/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.lukhnos.$(PRODUCT_NAME:rfc1034identifier)";
