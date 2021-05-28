@@ -126,7 +126,7 @@ NSAttributedString *__nonnull GetAttrString(NSString *__nonnull str, CGFloat siz
 }
 
 - (IBAction)sourceButtonAction {
-    [[UIApplication sharedApplication] openURL:self.source];
+    [[UIApplication sharedApplication] openURL:self.source options:@{} completionHandler:nil];
 }
 
 @end

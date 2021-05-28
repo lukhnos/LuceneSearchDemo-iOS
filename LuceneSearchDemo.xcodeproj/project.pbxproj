@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6A0A88F61B92A05B00F8A7C8 /* DocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0A88F51B92A05B00F8A7C8 /* DocumentCell.xib */; };
 		6A9F613D1BA2921300C13146 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9F613C1BA2921300C13146 /* DetailsViewController.swift */; };
+		6AC196A42660C5420029A94B /* libjre_emul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC196A12660C1FB0029A94B /* libjre_emul.a */; };
+		6AC196A62660C59A0029A94B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC196A52660C59A0029A94B /* libz.tbd */; };
+		6AC196A82660C5AF0029A94B /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC196A72660C5AF0029A94B /* libiconv.tbd */; };
+		6AC196AA2660C5BC0029A94B /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC196A92660C5BC0029A94B /* libjson.a */; };
 		6AF294621B92B1A9009B5234 /* DocumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294611B92B1A9009B5234 /* DocumentCell.m */; };
 		6AF294651B92CC5C009B5234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AF294671B92CC5C009B5234 /* InfoPlist.strings */; };
 		6AF294811B92E050009B5234 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294701B92E050009B5234 /* Document.m */; };
@@ -21,8 +25,6 @@
 		6AF294881B92E050009B5234 /* Suggester.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2947E1B92E050009B5234 /* Suggester.m */; };
 		6AF294891B92E050009B5234 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF294801B92E050009B5234 /* Util.m */; };
 		6AF294991B92E0E8009B5234 /* libObjCLucene.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF294941B92E0D5009B5234 /* libObjCLucene.a */; };
-		6AF2949C1B92E100009B5234 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2949B1B92E100009B5234 /* libicucore.dylib */; };
-		6AF2949E1B92E105009B5234 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF2949D1B92E105009B5234 /* libz.dylib */; };
 		6AF294A21B92E79E009B5234 /* acl-imdb-subset.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */; };
 		6AF499501B922D04005D9CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4994F1B922D04005D9CFB /* AppDelegate.swift */; };
 		6AF499521B922D04005D9CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF499511B922D04005D9CFB /* ViewController.swift */; };
@@ -68,6 +70,11 @@
 /* Begin PBXFileReference section */
 		6A0A88F51B92A05B00F8A7C8 /* DocumentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentCell.xib; sourceTree = "<group>"; };
 		6A9F613C1BA2921300C13146 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		6AC1969F2660C12D0029A94B /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = vendor/j2objc/lib/macosx/libjre_emul.a; sourceTree = "<group>"; };
+		6AC196A12660C1FB0029A94B /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = vendor/j2objc/lib/libjre_emul.a; sourceTree = "<group>"; };
+		6AC196A52660C59A0029A94B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6AC196A72660C5AF0029A94B /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		6AC196A92660C5BC0029A94B /* libjson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjson.a; path = vendor/j2objc/lib/libjson.a; sourceTree = "<group>"; };
 		6AF294601B92B1A9009B5234 /* DocumentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentCell.h; sourceTree = "<group>"; };
 		6AF294611B92B1A9009B5234 /* DocumentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentCell.m; sourceTree = "<group>"; };
 		6AF294661B92CC5C009B5234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -90,8 +97,6 @@
 		6AF2947F1B92E050009B5234 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		6AF294801B92E050009B5234 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjCLucene.xcodeproj; path = vendor/objclucene/ObjCLucene.xcodeproj; sourceTree = "<group>"; };
-		6AF2949B1B92E100009B5234 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		6AF2949D1B92E105009B5234 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6AF294A11B92E79E009B5234 /* acl-imdb-subset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "acl-imdb-subset.json"; sourceTree = "<group>"; };
 		6AF4994A1B922D04005D9CFB /* LuceneFilmReviewSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuceneFilmReviewSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF4994E1B922D04005D9CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,9 +119,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AF2949E1B92E105009B5234 /* libz.dylib in Frameworks */,
-				6AF2949C1B92E100009B5234 /* libicucore.dylib in Frameworks */,
-				75D8CE4A1CEC767500E15FB6 /* libjre_emul.a in Frameworks */,
+				6AC196AA2660C5BC0029A94B /* libjson.a in Frameworks */,
+				6AC196A82660C5AF0029A94B /* libiconv.tbd in Frameworks */,
+				6AC196A62660C59A0029A94B /* libz.tbd in Frameworks */,
+				6AC196A42660C5420029A94B /* libjre_emul.a in Frameworks */,
 				6AF294991B92E0E8009B5234 /* libObjCLucene.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +137,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AC1969D2660C0F40029A94B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AC196A92660C5BC0029A94B /* libjson.a */,
+				6AC196A72660C5AF0029A94B /* libiconv.tbd */,
+				6AC196A52660C59A0029A94B /* libz.tbd */,
+				6AC196A12660C1FB0029A94B /* libjre_emul.a */,
+				6AC1969F2660C12D0029A94B /* libjre_emul.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6AF294681B92E010009B5234 /* lucenestudy */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +243,6 @@
 		6AF2948C1B92E087009B5234 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				75D8CE491CEC767500E15FB6 /* libjre_emul.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -255,9 +272,8 @@
 				6AF2948A1B92E056009B5234 /* vendor */,
 				6AF499621B922D04005D9CFB /* LuceneSearchDemoTests */,
 				6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */,
-				6AF2949D1B92E105009B5234 /* libz.dylib */,
-				6AF2949B1B92E100009B5234 /* libicucore.dylib */,
 				6AF4994B1B922D04005D9CFB /* Products */,
+				6AC1969D2660C0F40029A94B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -363,7 +379,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Lukhnos Liu";
 				TargetAttributes = {
 					6AF499491B922D04005D9CFB = {
@@ -377,7 +393,7 @@
 			};
 			buildConfigurationList = 6AF499451B922D04005D9CFB /* Build configuration list for PBXProject "LuceneSearchDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -517,17 +533,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -550,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -562,17 +590,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -588,9 +628,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -608,6 +649,7 @@
 					"$(SRCROOT)/lucenestudy/src/main/objc",
 				);
 				INFOPLIST_FILE = LuceneSearchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -619,6 +661,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LuceneSearchDemo/LuceneSearchDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -635,6 +678,7 @@
 					"$(SRCROOT)/lucenestudy/src/main/objc",
 				);
 				INFOPLIST_FILE = LuceneSearchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,6 +689,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.lukhnos.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LuceneSearchDemo/LuceneSearchDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -658,9 +703,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = LuceneSearchDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.lukhnos.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuceneFilmReviewSearch.app/LuceneFilmReviewSearch";
 			};
 			name = Debug;
@@ -671,9 +718,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = LuceneSearchDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.lukhnos.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuceneFilmReviewSearch.app/LuceneFilmReviewSearch";
 			};
 			name = Release;

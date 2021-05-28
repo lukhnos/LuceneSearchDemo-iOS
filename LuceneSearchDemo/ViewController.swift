@@ -26,9 +26,10 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+
     let cellReuseID = "DocumentCell"
 
-    var foundDocuments: NSArray = []
+    var foundDocuments: [Any] = []
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var infoView: UIView!
@@ -51,39 +52,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         state = .Welcome
-        tableView.registerNib(UINib(nibName: cellReuseID, bundle: nil), forCellReuseIdentifier: cellReuseID)
+        tableView.register(UINib(nibName: cellReuseID, bundle: nil), forCellReuseIdentifier: cellReuseID)
         tableView.rowHeight = 108;
-        searchBar.autocapitalizationType = UITextAutocapitalizationType.None
+        searchBar.autocapitalizationType = UITextAutocapitalizationType.none
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if !NSFileManager.defaultManager().fileExistsAtPath(Document.indexRootPath()) {
+        if !FileManager.default.fileExists(atPath: Document.indexRootPath()) {
             rebuildAction()
         }
 
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(selectedIndexPath, animated: false)
+            tableView.deselectRow(at: selectedIndexPath, animated: false)
         }
     }
 
     @IBAction func moreInfoAction() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://lukhnos.org/mobilelucene/app-ios")!)
+        UIApplication.shared.open(URL(string: "https://lukhnos.org/mobilelucene/app-ios")!, options: [:], completionHandler: nil)
     }
 
     @IBAction func rebuildAction() {
-        reindexButtonItem.enabled = false
+        reindexButtonItem.isEnabled = false
         state = .RebuildingIndex
         searchBar.text = ""
         searchBar.resignFirstResponder()
-        searchBar.hidden = true
+        searchBar.isHidden = true
         foundDocuments = []
         tableView.reloadData()
 
         Document.rebuildIndex({
             self.state = .Welcome
-            self.searchBar.hidden = false
-            self.reindexButtonItem.enabled = true
+            self.searchBar.isHidden = false
+            self.reindexButtonItem.isEnabled = true
         })
     }
 
@@ -94,41 +95,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case .Welcome:
             hideInfo = false
             activityIndicator.stopAnimating()
-            infoLabel.hidden = false
+            infoLabel.isHidden = false
             infoLabel.text = NSLocalizedString("Search with Lucene", comment: "");
-            linkButton.hidden = false
+            linkButton.isHidden = false
         case .Searching:
             hideInfo = false
             activityIndicator.startAnimating()
-            infoLabel.hidden = true
+            infoLabel.isHidden = true
             infoLabel.text = ""
-            linkButton.hidden = true
+            linkButton.isHidden = true
         case .NoResult:
             hideInfo = false
             activityIndicator.stopAnimating()
-            infoLabel.hidden = false
+            infoLabel.isHidden = false
             infoLabel.text = NSLocalizedString("No Results", comment: "");
-            linkButton.hidden = true
+            linkButton.isHidden = true
         case .HasResults:
             hideInfo = true
             activityIndicator.stopAnimating()
-            infoLabel.hidden = true
+            infoLabel.isHidden = true
             infoLabel.text = "";
-            linkButton.hidden = true
+            linkButton.isHidden = true
         case .RebuildingIndex:
             hideInfo = false
             activityIndicator.startAnimating()
-            infoLabel.hidden = false
+            infoLabel.isHidden = false
             infoLabel.text = NSLocalizedString("Indexing Reviews…", comment: "");
-            linkButton.hidden = true
+            linkButton.isHidden = true
         }
-        infoView.hidden = hideInfo
-        tableView.hidden = !hideInfo
+        infoView.isHidden = hideInfo
+        tableView.isHidden = !hideInfo
     }
 
     var text = NSMutableString()
 
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         state = .Searching
 
@@ -136,44 +137,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             text.setString(t)
         }
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        DispatchQueue.global(qos: .default).async {
             if let docs = Document.search(self.text) {
                 self.foundDocuments = docs
             } else {
                 self.foundDocuments = []
             }
 
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async {
                 if self.foundDocuments.count > 0 {
                     self.state = .HasResults
                 } else {
                     self.state = .NoResult
                 }
-                self.tableView.setContentOffset(CGPointZero, animated: false)
+                self.tableView.setContentOffset(CGPoint.zero, animated: false)
                 self.tableView.reloadData()
-            })
-        })
+            }
+        }
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foundDocuments.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as! DocumentCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID, for: indexPath) as! DocumentCell
         let doc = foundDocuments[indexPath.row] as! Document
         cell.configureCell(doc)
         return cell
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("showDetail", sender: self)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             let doc = foundDocuments[selectedIndexPath.row] as! Document
-            let controller = segue.destinationViewController as! DetailsViewController
+            let controller = segue.destination as! DetailsViewController
             controller.document = doc
         }
     }

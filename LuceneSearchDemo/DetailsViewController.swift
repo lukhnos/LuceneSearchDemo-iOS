@@ -38,32 +38,32 @@ class DetailsViewController : UIViewController {
         }
 
         let text = NSMutableAttributedString()
-        text.appendAttributedString(GetAttrString(document.highlightedTitle, 18))
-        text.appendAttributedString(NSAttributedString(string: "\n\n"))
-        text.appendAttributedString(GetAttrString(document.info, 12))
-        text.appendAttributedString(NSAttributedString(string: "\n\n"))
-        text.appendAttributedString(GetAttrString(document.highlightedReview, 14))
+        text.append(GetAttrString(document.highlightedTitle, 18))
+        text.append(NSAttributedString(string: "\n\n"))
+        text.append(GetAttrString(document.info, 12))
+        text.append(NSAttributedString(string: "\n\n"))
+        text.append(GetAttrString(document.highlightedReview, 14))
 
         reviewTextView.attributedText = text
         reviewTextView.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
 //        reviewTextView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: false)
 //        reviewTextView.setContentOffset(CGPointZero, animated: false)
-        reviewTextView.scrollEnabled = false
+        reviewTextView.isScrollEnabled = false
 
         if let _ = document.source {
-            let sourceButton = UIBarButtonItem(title: "Source", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("sourceAction"))
+            let sourceButton = UIBarButtonItem(title: "Source", style: UIBarButtonItem.Style.plain, target: self, action: #selector(sourceAction))
             navigationItem.rightBarButtonItem = sourceButton
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        reviewTextView.scrollEnabled = true
+        reviewTextView.isScrollEnabled = true
     }
 
-    func sourceAction() {
+    @objc func sourceAction() {
         if let source = document.source {
-            UIApplication.sharedApplication().openURL(source)
+            UIApplication.shared.open(source, options: [:], completionHandler: nil)            
         }
     }
 }
