@@ -52,8 +52,8 @@ NSAttributedString *__nonnull GetAttrString(NSString *__nonnull str, CGFloat siz
 {
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] init];
 
-    NSDictionary *normalAttrs = @{NSFontAttributeName: [UIFont systemFontOfSize:size]};
-    NSDictionary *boldAttrs = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:size]};
+    NSDictionary *normalAttrs = @{NSFontAttributeName: [UIFont systemFontOfSize:size], NSForegroundColorAttributeName: [UIColor labelColor]};
+    NSDictionary *boldAttrs = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:size], NSForegroundColorAttributeName: [UIColor labelColor]};
     NSDictionary *attrs = normalAttrs;
 
     NSInteger from = 0;
