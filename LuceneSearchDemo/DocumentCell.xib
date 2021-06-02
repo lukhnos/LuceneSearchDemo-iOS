@@ -47,7 +47,6 @@
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oS9-Np-ObI">
                         <rect key="frame" x="16" y="63" width="288" height="48"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <attributedString key="attributedText">
                             <fragment content="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu">
                                 <attributes>
@@ -59,7 +58,6 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="Dvv-CD-4zl" firstAttribute="leading" secondItem="Xa7-hq-Bdy" secondAttribute="leadingMargin" id="4pc-vy-m66"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Dvv-CD-4zl" secondAttribute="trailing" id="DCd-el-6Bb"/>
@@ -93,9 +91,6 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
