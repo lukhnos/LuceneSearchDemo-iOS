@@ -33,7 +33,6 @@
 		6AF4995A1B922D04005D9CFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF499581B922D04005D9CFB /* LaunchScreen.xib */; };
 		6AF499661B922D04005D9CFB /* LuceneSearchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF499651B922D04005D9CFB /* LuceneSearchDemoTests.swift */; };
 		6AF499731B928F21005D9CFB /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF499721B928F21005D9CFB /* Document.m */; };
-		75D8CE4A1CEC767500E15FB6 /* libjre_emul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D8CE491CEC767500E15FB6 /* libjre_emul.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 /* Begin PBXFileReference section */
 		6A0A88F51B92A05B00F8A7C8 /* DocumentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentCell.xib; sourceTree = "<group>"; };
 		6A9F613C1BA2921300C13146 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		6AC1969F2660C12D0029A94B /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = vendor/j2objc/lib/macosx/libjre_emul.a; sourceTree = "<group>"; };
 		6AC196A12660C1FB0029A94B /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = vendor/j2objc/lib/libjre_emul.a; sourceTree = "<group>"; };
 		6AC196A52660C59A0029A94B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6AC196A72660C5AF0029A94B /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -111,7 +109,6 @@
 		6AF499701B928F21005D9CFB /* LuceneSearchDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuceneSearchDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		6AF499711B928F21005D9CFB /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		6AF499721B928F21005D9CFB /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
-		75D8CE491CEC767500E15FB6 /* libjre_emul.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjre_emul.a; path = vendor/j2objc/lib/libjre_emul.a; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +141,6 @@
 				6AC196A72660C5AF0029A94B /* libiconv.tbd */,
 				6AC196A52660C59A0029A94B /* libz.tbd */,
 				6AC196A12660C1FB0029A94B /* libjre_emul.a */,
-				6AC1969F2660C12D0029A94B /* libjre_emul.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,30 +219,6 @@
 			path = lucenestudy;
 			sourceTree = "<group>";
 		};
-		6AF2948A1B92E056009B5234 /* vendor */ = {
-			isa = PBXGroup;
-			children = (
-				6AF2948B1B92E069009B5234 /* j2objc */,
-			);
-			path = vendor;
-			sourceTree = "<group>";
-		};
-		6AF2948B1B92E069009B5234 /* j2objc */ = {
-			isa = PBXGroup;
-			children = (
-				6AF2948C1B92E087009B5234 /* lib */,
-			);
-			name = j2objc;
-			path = vendor/j2objc;
-			sourceTree = "<group>";
-		};
-		6AF2948C1B92E087009B5234 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
 		6AF2948F1B92E0D3009B5234 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +241,6 @@
 			children = (
 				6AF4994C1B922D04005D9CFB /* LuceneSearchDemo */,
 				6AF294681B92E010009B5234 /* lucenestudy */,
-				6AF2948A1B92E056009B5234 /* vendor */,
 				6AF499621B922D04005D9CFB /* LuceneSearchDemoTests */,
 				6AF2948E1B92E0D3009B5234 /* ObjCLucene.xcodeproj */,
 				6AF4994B1B922D04005D9CFB /* Products */,
