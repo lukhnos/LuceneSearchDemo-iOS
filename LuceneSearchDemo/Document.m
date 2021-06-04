@@ -149,7 +149,16 @@
 - (NSString *)highlightedReviewSnippet
 {
     if (!self.cachedHighlightedReviewSnippet) {
-        self.cachedHighlightedReviewSnippet = [self.searchResult getHighlightedReviewWithOrgLukhnosLucenestudyDocument:self.searchDocument];
+        NSString *snippet = [self.searchResult getHighlightedReviewWithOrgLukhnosLucenestudyDocument:self.searchDocument];
+        
+        if (snippet.length > 0) {
+            NSString *lastChar = [snippet substringFromIndex:snippet.length - 1];
+            if (![lastChar isEqualToString:@"…"] && ![lastChar isEqualToString:@"."]) {
+                snippet = [snippet stringByAppendingString:@"…"];
+            }
+        }
+        
+        self.cachedHighlightedReviewSnippet = snippet;
     }
     return self.cachedHighlightedReviewSnippet;
 }
