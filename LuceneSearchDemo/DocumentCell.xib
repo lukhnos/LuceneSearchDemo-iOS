@@ -22,7 +22,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-iU-SDp">
-                        <rect key="frame" x="260" y="34" width="44" height="28"/>
+                        <rect key="frame" x="260" y="36" width="44" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="DET-eV-zbo"/>
                             <constraint firstAttribute="width" constant="60" id="nvg-Ce-g0o"/>
@@ -66,7 +66,7 @@
                     <constraint firstItem="uav-LM-YaQ" firstAttribute="leading" secondItem="Xa7-hq-Bdy" secondAttribute="leadingMargin" id="Mi4-bx-hVA"/>
                     <constraint firstItem="uav-LM-YaQ" firstAttribute="top" secondItem="Dvv-CD-4zl" secondAttribute="bottom" constant="8" id="UeA-Ix-SuZ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="oS9-Np-ObI" secondAttribute="trailing" id="Wu5-PM-cc7"/>
-                    <constraint firstItem="ZNU-iU-SDp" firstAttribute="centerY" secondItem="uav-LM-YaQ" secondAttribute="centerY" constant="-2" id="iIr-ag-lhn"/>
+                    <constraint firstItem="ZNU-iU-SDp" firstAttribute="centerY" secondItem="uav-LM-YaQ" secondAttribute="centerY" id="iIr-ag-lhn"/>
                     <constraint firstItem="ZNU-iU-SDp" firstAttribute="trailing" secondItem="Xa7-hq-Bdy" secondAttribute="trailingMargin" id="lqs-BR-B7U"/>
                     <constraint firstItem="ZNU-iU-SDp" firstAttribute="leading" secondItem="uav-LM-YaQ" secondAttribute="trailing" constant="8" id="mkU-fI-ivD"/>
                     <constraint firstItem="oS9-Np-ObI" firstAttribute="top" secondItem="uav-LM-YaQ" secondAttribute="bottom" constant="8" id="wSd-hM-XYg"/>

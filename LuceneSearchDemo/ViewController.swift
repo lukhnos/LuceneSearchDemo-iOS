@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         state = .Welcome
         tableView.register(UINib(nibName: cellReuseID, bundle: nil), forCellReuseIdentifier: cellReuseID)
-        tableView.rowHeight = 108;
+        tableView.rowHeight = 128;
         searchBar.autocapitalizationType = UITextAutocapitalizationType.none
     }
 
